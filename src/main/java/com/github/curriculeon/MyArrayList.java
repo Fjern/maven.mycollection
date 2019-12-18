@@ -4,20 +4,19 @@ package com.github.curriculeon;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
 public class MyArrayList<SomeType> implements MyCollectionInterface<SomeType>{
-    List<SomeType> myArrL = new ArrayList<>();
+    private List<SomeType> myArrL = new ArrayList<>();
 
     public MyArrayList() {
 
     }
 
     public MyArrayList(SomeType[] valuesToBePopulatedWith) {
-        for (SomeType elem:valuesToBePopulatedWith) {
-            myArrL.add(elem);
-        }
+        myArrL.addAll(Arrays.asList(valuesToBePopulatedWith));
     }
 
     @Override
